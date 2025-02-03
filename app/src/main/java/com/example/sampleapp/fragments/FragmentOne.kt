@@ -28,10 +28,20 @@ class FragmentOne : Fragment() {
         binding.privacy.setOnClickListener {
             (activity as MainActivity).loadFragment(FragmentTwo())
         }
+
+        binding.insights.setOnClickListener {
+            (activity as MainActivity).loadFragment(InsightsFragment())
+        }
+        binding.addAdmin.setOnClickListener {
+            (activity as MainActivity).loadFragment(AdminFragment())
+        }
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null  // Avoid memory leaks
+        if (parentFragmentManager.backStackEntryCount == 0) {
+            activity?.finish()
+        }
     }
 }

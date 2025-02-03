@@ -50,4 +50,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
     implementation ("com.intuit.ssp:ssp-android:1.1.1")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation ("com.google.android.material:material:1.9.0")
 }

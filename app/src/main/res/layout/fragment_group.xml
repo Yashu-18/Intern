@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1A1A1A"
-    tools:context=".fragments.FragmentThree">
+    tools:context=".fragments.GroupFragment">
 
     <ImageView
         android:id="@+id/backArrow"
@@ -22,8 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_40sdp"
-        android:layout_marginEnd="@dimen/_145sdp"
-        android:text="CreateDiary"
+        android:layout_marginEnd="@dimen/_185sdp"
+        android:text="Groups"
         android:textColor="#ffff"
         android:textSize="@dimen/_22ssp"
         android:textStyle="bold"
@@ -32,58 +32,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
+
     <LinearLayout
-        android:id="@+id/view1"
         android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_height="@dimen/_162sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:background="@drawable/boarder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:src="@drawable/globe" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_7sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Public"
-            android:textColor="#ffff"
-            android:textSize="@dimen/_14ssp" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_140sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_2sdp"
-            android:layout_weight="1"
-            android:checked="false"
-            app:thumbTint="@color/white" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_210sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:background="@drawable/boarder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view1">
 
 
         <LinearLayout
@@ -104,10 +63,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:text="Everyone"
+                android:text="Creative Director"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="Camera Man"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -127,32 +95,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:text="Crew Members"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14ssp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:text="Group"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14ssp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:text="Custom"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14ssp" />
         </LinearLayout>
 
         <LinearLayout
@@ -189,13 +132,22 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:src="@drawable/circular_button" />
 
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/circular_button" />
+
+
+
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_40sdp"
             android:orientation="vertical">
 
             <TextView
@@ -230,26 +182,10 @@
             <ImageView
                 android:layout_width="@dimen/_15sdp"
                 android:layout_height="@dimen/_15sdp"
-                android:id="@+id/crewbtn"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/circular_button" />
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:id="@+id/groupbtn"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:src="@drawable/right_arrow" />
-
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:id="@+id/custombtn"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:src="@drawable/right_arrow" />
 
         </LinearLayout>
 
@@ -257,37 +193,6 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
-        android:background="@drawable/boarder"
-        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:text="Contibution to be Admin Approved"
-            android:textColor="#ffff"
-            android:textSize="@dimen/_12ssp" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="Switch"
-            app:thumbTint="@color/white" />
-
-
-    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveBtn"
