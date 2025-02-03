@@ -71,8 +71,7 @@
             android:layout_marginEnd="@dimen/_2sdp"
             app:thumbTint="@color/white"
             android:layout_weight="1"
-            android:checked="false"
-            android:text="Switch" />
+            android:checked="false" />
 
 
     </LinearLayout>
