@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_40sdp"
@@ -40,7 +40,7 @@
         android:background="@drawable/boarder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -77,8 +77,8 @@
 
 
     <LinearLayout
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_210sdp"
+        android:layout_width="@dimen/_310sdp"
+        android:layout_height="@dimen/_250sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:background="@drawable/boarder"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:text="Followers"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
@@ -122,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Following"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Crew Members"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Group"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
@@ -149,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Custom"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
@@ -167,27 +167,25 @@
                 android:text="View"
                 android:textColor="@color/white" />
 
-            <ImageView
-                android:id="@+id/contriBtn"
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:src="@drawable/circular_button" />
+                android:layout_marginTop="@dimen/_4sdp" />
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:src="@drawable/circular_button" />
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/circular_button" />
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
 
         </LinearLayout>
 
@@ -205,26 +203,24 @@
                 android:text="Contributioins"
                 android:textColor="@color/white" />
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_17sdp"
-                android:src="@drawable/circular_button" />
+                android:layout_marginTop="@dimen/_4sdp" />
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:src="@drawable/circular_button" />
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/circular_button" />
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
 
 
             <ImageView
@@ -232,7 +228,7 @@
                 android:layout_height="@dimen/_15sdp"
                 android:id="@+id/crewbtn"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_13sdp"
                 android:src="@drawable/right_arrow" />
 
             <ImageView
@@ -240,7 +236,7 @@
                 android:layout_height="@dimen/_15sdp"
                 android:id="@+id/groupbtn"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_22sdp"
                 android:src="@drawable/right_arrow" />
 
             <ImageView
@@ -248,7 +244,7 @@
                 android:layout_height="@dimen/_15sdp"
                 android:id="@+id/custombtn"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_24sdp"
                 android:src="@drawable/right_arrow" />
 
         </LinearLayout>
@@ -294,8 +290,9 @@
         android:layout_width="@dimen/_300sdp"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="#EB3030"
+        android:backgroundTint="@color/orange"
         android:text="SAVE"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

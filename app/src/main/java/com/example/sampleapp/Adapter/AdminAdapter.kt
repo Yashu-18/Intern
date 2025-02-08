@@ -2,10 +2,8 @@ package com.example.sampleapp.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sampleapp.databinding.AccessItemBinding
-import com.example.sampleapp.fragments.BottomFragment
 import com.example.sampleapp.model.accessModel
 
 class AdminAdapter(private val userlist:List<accessModel>):

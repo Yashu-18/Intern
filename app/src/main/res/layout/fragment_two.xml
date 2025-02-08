@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_40sdp"
@@ -41,7 +41,7 @@
         android:background="@drawable/boarder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -109,13 +109,13 @@
                 android:text="Contributions"
                 android:textColor="@color/white"/>
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
+            <RadioButton
                 android:id="@+id/contriBtn"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/circular_button"/>
+                android:layout_marginTop="@dimen/_6sdp" />
+
 
         </LinearLayout>
 
@@ -131,13 +131,13 @@
                 android:text="View"
                 android:textColor="@color/white"/>
 
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
+            <RadioButton
                 android:id="@+id/viewBtn"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/circular_button"/>
+                android:layout_marginTop="@dimen/_6sdp" />
+
 
         </LinearLayout>
 
@@ -183,7 +183,7 @@
         android:id="@+id/saveBtn"
         android:text="SAVE"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="#EB3030"
+        android:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

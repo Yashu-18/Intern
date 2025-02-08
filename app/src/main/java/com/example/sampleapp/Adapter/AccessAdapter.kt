@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sampleapp.databinding.AccessItemBinding
-import com.example.sampleapp.fragments.BottomFragment
+import com.example.sampleapp.BottomFragments.BottomFragment
 import com.example.sampleapp.model.accessModel
 
 class AccessAdapter(private val userlist:List<accessModel>,private val fragmentManager: FragmentManager):RecyclerView.Adapter<AccessAdapter.UserViewHolder>() {

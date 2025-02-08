@@ -32,8 +32,25 @@ class FragmentOne : Fragment() {
         binding.insights.setOnClickListener {
             (activity as MainActivity).loadFragment(InsightsFragment())
         }
-        binding.addAdmin.setOnClickListener {
-            (activity as MainActivity).loadFragment(AdminFragment())
+
+        binding.cover.setOnClickListener {
+            (activity as MainActivity).loadFragment(CoverFragment())
+        }
+
+        binding.mediaType.setOnClickListener {
+            (activity as MainActivity).loadFragment(MediaFragment())
+        }
+
+        binding.inputType.setOnClickListener {
+            (activity as MainActivity).loadFragment(InputTypeFragment())
+        }
+
+        binding.connect.setOnClickListener {
+            (activity as MainActivity).loadFragment(ConnectDiaryFragment())
+        }
+
+        binding.highlights.setOnClickListener {
+            (activity as MainActivity).loadFragment(HighlightsFragment())
         }
 
     }

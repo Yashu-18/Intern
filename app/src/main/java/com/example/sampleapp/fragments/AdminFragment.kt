@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sampleapp.Adapter.AccessAdapter
 import com.example.sampleapp.R
-import com.example.sampleapp.databinding.FragmentAccessBinding
 import com.example.sampleapp.databinding.FragmentAdminBinding
 import com.example.sampleapp.model.accessModel
 
@@ -33,13 +32,13 @@ class AdminFragment : Fragment() {
 
         for(i in 1..5){
             users.add(
-                accessModel(R.drawable.image,"Alice","Software Engineer")
+                accessModel(R.drawable.image1,"Alice","Software Engineer")
             )
             users.add(
-                accessModel(R.drawable.image,"Bob","UI/UX")
+                accessModel(R.drawable.image1,"Bob","UI/UX")
             )
             users.add(
-                accessModel(R.drawable.image,"Charlie","Project Manager")
+                accessModel(R.drawable.image1,"Charlie","Project Manager")
             )
         }
 

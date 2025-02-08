@@ -19,7 +19,7 @@
 
     <!-- Title Text -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_40sdp"
@@ -43,14 +43,16 @@
         android:queryHint="Search..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <!-- RecyclerView below SearchView and above Save Button -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAdmin"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:listitem="@layout/access_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
