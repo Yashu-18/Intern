@@ -6,43 +6,46 @@
     android:background="#1A1A1A"
     tools:context=".fragments.MediaFragment">
 
-    <!-- Back Arrow Image -->
     <ImageView
         android:id="@+id/backArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_45sdp"
         android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
-    <!-- Title Text -->
+
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="103dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="59dp"
+        android:paddingTop="4dp"
+        android:fontFamily="@font/poppins"
         android:text="Media Post Format"
         android:textColor="#ffff"
-        android:textSize="@dimen/_22ssp"
+        android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="@dimen/_45sdp"
+        android:fontFamily="@font/poppins"
         android:text="Default Media Post Format for diary?"
         android:textColor="@color/white"
-        android:textSize="@dimen/_15ssp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -50,7 +53,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="36dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,11 +61,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView33"
         app:layout_goneMarginTop="16dp">
 
-        <!-- Text Option -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingVertical="8dp">
 
@@ -72,8 +74,9 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:text="Text"
+                android:fontFamily="@font/poppins"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_15ssp" />
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/rbText"
@@ -94,9 +97,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppins"
                 android:text="Image"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_15ssp" />
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/rbImage"
@@ -104,7 +108,7 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Video Option -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,7 +123,8 @@
                 android:layout_weight="1"
                 android:text="Video"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_15ssp" />
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
 
             <RadioButton
                 android:id="@+id/rbVideo"
@@ -127,7 +132,7 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Notification Option -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -142,7 +147,8 @@
                 android:layout_weight="1"
                 android:text="Notification"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_15ssp" />
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
 
             <RadioButton
                 android:id="@+id/rbNotification"
@@ -155,10 +161,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveBtn"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="@color/orange"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/btn_background"
         android:text="SAVE"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

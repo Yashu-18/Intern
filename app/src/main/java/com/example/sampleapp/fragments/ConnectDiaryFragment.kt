@@ -1,22 +1,20 @@
 package com.example.sampleapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.collabdiary.android.views.fragments.BaseFragment
 import com.example.sampleapp.R
+import com.example.sampleapp.databinding.FragmentConnectDiaryBinding
 
-class ConnectDiaryFragment : Fragment() {
+class ConnectDiaryFragment : BaseFragment<FragmentConnectDiaryBinding>(R.layout.fragment_connect_diary) {
 
+    override val binding by lazy { FragmentConnectDiaryBinding.inflate(layoutInflater) }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_connect_diary, container, false)
+    override fun onBackPressed() {
+        // Handle back press logic if needed
     }
 
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
 }

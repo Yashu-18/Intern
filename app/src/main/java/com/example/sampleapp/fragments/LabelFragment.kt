@@ -1,35 +1,26 @@
 package com.example.sampleapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.collabdiary.android.views.fragments.BaseFragment
 import com.example.sampleapp.Adapter.LabelAdapter
 import com.example.sampleapp.R
 import com.example.sampleapp.databinding.FragmentLabelBinding
 import com.example.sampleapp.model.labelModel
 
+class LabelFragment : BaseFragment<FragmentLabelBinding>(R.layout.fragment_label) {
 
-class LabelFragment : Fragment() {
-
-    private var _binding: FragmentLabelBinding? = null
-    private val binding get() = _binding!! // Safe access to binding
+    override val binding by lazy { FragmentLabelBinding.inflate(layoutInflater) }
 
     private lateinit var adapter: LabelAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentLabelBinding.inflate(inflater, container, false)
-        return binding.root
+    override fun onBackPressed() {
+        TODO("Not yet implemented")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupRecyclerView()
     }
 
@@ -46,10 +37,5 @@ class LabelFragment : Fragment() {
 
         adapter = LabelAdapter(labelItems)
         binding.recyclerView.adapter = adapter
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null // Prevent memory leaks
     }
 }

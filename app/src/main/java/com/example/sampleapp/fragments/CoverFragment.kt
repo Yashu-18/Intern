@@ -1,46 +1,57 @@
 package com.example.sampleapp.fragments
 
+import android.app.Activity
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.provider.MediaStore
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.Fragment
+import com.collabdiary.android.views.fragments.BaseFragment
+import com.example.sampleapp.R
 import com.example.sampleapp.databinding.FragmentCoverBinding
 
-class CoverFragment : Fragment() {
+class CoverFragment : BaseFragment<FragmentCoverBinding>(R.layout.fragment_cover) {
 
-    private var _binding: FragmentCoverBinding? = null
-    private val binding get() = _binding!!
+    override val binding by lazy { FragmentCoverBinding.inflate(layoutInflater) }
 
-    // Register the image picker using Activity Result API
-    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        uri?.let {
-            binding.CoverImage.setImageURI(it)
-        }
+    override fun onBackPressed() {
+        // Handle back press logic if needed
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-
-        _binding = FragmentCoverBinding.inflate(inflater, container, false)
-        return binding.root
+    // Image Picker Launcher
+    private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK && result.data != null) {
+            val imageUri: Uri? = result.data?.data
+            imageUri?.let {
+                binding.placeImage.setImageURI(it) // Set the selected image
+                binding.plusIcon.visibility = View.GONE // Hide the plus icon
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Handle button click to pick an image
-        binding.CoverImage.setOnClickListener {
-            pickImageLauncher.launch("image/*")
+        // Open Image Picker when the CoverImage is clicked
+        binding.placeImage.setOnClickListener {
+            openImagePicker()
+        }
+
+        // Reset image on long press (optional)
+        binding.placeImage.setOnLongClickListener {
+            binding.placeImage.setImageResource(R.drawable.custom_thum_setting) // Reset to default
+            binding.plusIcon.visibility = View.VISIBLE // Show plus icon again
+            true
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null // Avoid memory leaks
+    // Function to Open Image Picker (Gallery & Camera)
+    private fun openImagePicker() {
+        val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val chooserIntent = Intent.createChooser(galleryIntent, "Select Image")
+        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf(cameraIntent))
+        imagePickerLauncher.launch(chooserIntent)
     }
 }

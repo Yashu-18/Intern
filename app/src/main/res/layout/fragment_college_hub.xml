@@ -13,29 +13,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_45sdp"
         android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="59dp"
+        android:paddingTop="4dp"
+        android:fontFamily="@font/poppins"
         android:text="College Hub"
         android:textColor="#ffff"
-        android:textSize="@dimen/_22ssp"
+        android:textSize="21sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,181 +53,215 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
         android:text="Crew Collaborator"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView1" />
 
+
+
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:src="@drawable/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView1" />
+        app:layout_constraintTop_toTopOf="@id/textView21" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Location"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@id/textView21" />
+
+
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:src="@drawable/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="@id/textView22" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Link"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@id/textView22" />
+
+
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:src="@drawable/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-
+        app:layout_constraintTop_toTopOf="@id/textView23" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Events"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toTopOf="@id/textView24" />
 
     <TextView
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Resources"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintTop_toBottomOf="@id/textView24" />
+
+    <!-- Alumni Network -->
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="36dp"
         android:src="@drawable/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toTopOf="@id/textView25" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Alumni Network"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        app:layout_constraintTop_toBottomOf="@id/textView25" />
+
+    <!-- Make it Private -->
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:src="@drawable/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-
-
+        app:layout_constraintTop_toTopOf="@id/textView28" />
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Make it Private"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+        app:layout_constraintTop_toBottomOf="@id/textView28" />
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switch1"
+    <!-- Show Insights -->
+
+    <Switch
+        android:id="@+id/swNearByInflu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_gravity="center_vertical"
         android:layout_marginEnd="16dp"
-        android:checked="false"
+        android:thumb="@drawable/custom_thum_setting"
+        android:track="@drawable/custom_track"
+        app:layout_constraintBottom_toBottomOf="@+id/textView26"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:thumbTint="@color/white" />
+        app:layout_constraintTop_toTopOf="@+id/textView26"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         android:text="Show Insights"
         android:textColor="#DBDBDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+        app:layout_constraintTop_toBottomOf="@id/textView26" />
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switch2"
+    <Switch
+        android:id="@+id/swNearByInflu1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_marginEnd="16dp"
-        android:checked="false"
+        android:thumb="@drawable/custom_thum_setting"
+        android:track="@drawable/custom_track"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:thumbTint="@color/white" />
+        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="150dp"
         android:layout_height="@dimen/_45sdp"
         android:layout_margin="16dp"
         android:background="@drawable/boarder"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
         android:text="Save"
         android:textColor="#DBDBDB"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -232,7 +272,9 @@
         android:layout_width="150dp"
         android:layout_height="@dimen/_45sdp"
         android:layout_margin="16dp"
+        android:textSize="16sp"
         android:background="@drawable/boarder"
+        android:fontFamily="@font/poppins"
         android:text="Share"
         android:textColor="#DBDBDB"
         app:layout_constraintEnd_toEndOf="parent"

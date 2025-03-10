@@ -8,47 +8,57 @@
     tools:context=".fragments.PageFragment">
 
 
-    <!-- Title Text -->
-
     <ImageView
         android:id="@+id/backArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
-        android:text="Page name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="59dp"
+        android:fontFamily="@font/poppins"
+        android:paddingTop="4dp"
+        android:text="Page Name"
         android:textColor="#ffff"
-        android:textSize="@dimen/_18ssp"
+        android:textSize="21sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="16dp"
         android:text="Page name"
         android:textColor="#DBDBDB"
+        android:fontFamily="@font/medium_poppins"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
-        android:layout_width="@dimen/_270sdp"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
         android:background="@drawable/boarder"
+        android:maxLines="1"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,15 +66,18 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveBtn"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
         android:layout_height="@dimen/_45sdp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/orange"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_background"
         android:text="SAVE"
-        android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent" />
 
 

@@ -1,40 +1,30 @@
 package com.example.sampleapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sampleapp.Adapter.CollegeHubAdapter
+import com.collabdiary.android.views.fragments.BaseFragment
 import com.example.sampleapp.R
 import com.example.sampleapp.databinding.FragmentCollegeHubBinding
+import com.example.sampleapp.Adapter.CollegeHubAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
 
-class CollegeHubFragment : Fragment() {
+class CollegeHubFragment : BaseFragment<FragmentCollegeHubBinding>(R.layout.fragment_college_hub) {
 
-    private var _binding: FragmentCollegeHubBinding? = null
-    private val binding get() = _binding!!
+    override val binding by lazy { FragmentCollegeHubBinding.inflate(layoutInflater) }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentCollegeHubBinding.inflate(inflater, container, false)
+    override fun onBackPressed() {
+        // Handle back press logic if needed
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         binding.recyclerView1.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
 
         // Sample data
         val imageList = listOf(R.drawable.rectangle, R.drawable.rectangle, R.drawable.rectangle)
 
         // Set adapter
         binding.recyclerView1.adapter = CollegeHubAdapter(imageList)
-
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

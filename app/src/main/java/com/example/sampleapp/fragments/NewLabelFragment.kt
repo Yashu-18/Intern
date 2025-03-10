@@ -5,34 +5,28 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.Fragment
+import com.collabdiary.android.views.fragments.BaseFragment
+import com.example.sampleapp.R
 import com.example.sampleapp.databinding.FragmentNewLabelBinding
 
-class NewLabelFragment : Fragment() {
+class NewLabelFragment : BaseFragment<FragmentNewLabelBinding>(R.layout.fragment_new_label) {
 
-    private var _binding: FragmentNewLabelBinding? = null
-    private val binding get() = _binding!!
+    override val binding by lazy { FragmentNewLabelBinding.inflate(layoutInflater) }
+
+    override fun onBackPressed() {
+        TODO("Not yet implemented")
+    }
 
     // Image Picker Launcher
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK && result.data != null) {
-            val imageUri: Uri? = result.data?.data // Get selected image URI
+            val imageUri: Uri? = result.data?.data
             imageUri?.let {
-                binding.imagePicker.setImageURI(it) // Display selected image
+                binding.imagePicker.setImageURI(it)
             }
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentNewLabelBinding.inflate(inflater, container, false)
-        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -48,10 +42,5 @@ class NewLabelFragment : Fragment() {
     private fun openImagePicker() {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         imagePickerLauncher.launch(intent)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

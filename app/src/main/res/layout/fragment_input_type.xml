@@ -12,24 +12,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_45sdp"
         android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:layout_marginEnd="@dimen/_165sdp"
-        android:text="Input Type"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="59dp"
+        android:paddingTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="Input type"
         android:textColor="#ffff"
-        android:textSize="@dimen/_22ssp"
+        android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -39,20 +42,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
         android:text="Default Input type"
         android:textColor="@color/white"
-        android:textSize="@dimen/_15ssp"
+        android:textSize="21sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveBtn"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="@color/orange"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/btn_background"
         android:textColor="@color/white"
         android:text="SAVE"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -70,8 +78,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_18sdp"
             android:text="Fab Button"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/white" />
 
         <RadioButton
@@ -79,7 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/orange"
-            android:layout_marginStart="@dimen/_190sdp" />
+            android:layout_marginEnd="@dimen/_15sdp"
+            />
 
     </LinearLayout>
 
@@ -96,8 +108,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_18sdp"
             android:text="Text Input"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/white" />
 
         <RadioButton
@@ -105,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/orange"
-            android:layout_marginStart="@dimen/_196sdp" />
+            android:layout_marginEnd="@dimen/_15sdp" />
 
     </LinearLayout>
 

@@ -12,50 +12,70 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_45sdp"
         android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="59dp"
+        android:paddingTop="4dp"
+        android:fontFamily="@font/poppins"
         android:text="Add Cover Photo"
         android:textColor="#ffff"
-        android:textSize="@dimen/_22ssp"
+        android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CoverImage"
+    <FrameLayout
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:id="@+id/CoverImage"
         android:layout_marginTop="88dp"
-        android:src="@drawable/addbtn"
-        app:civ_border_color="#32BC55"
-        app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:id="@+id/placeImage"
+            android:layout_height="match_parent"
+            android:src="@drawable/custom_thum_setting"
+            app:civ_border_color="#32BC55"
+            app:civ_border_width="2dp"/>
+
+
+        <ImageView
+            android:id="@+id/plusIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/addbtn"
+            android:padding="8dp"/>
+
+    </FrameLayout>
+
 
 
     <TextView
         android:id="@+id/textView32"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
         android:text="Showcase your store’s vibe to attract \n influencers who value aesthetics and\nidentity."
         android:textColor="@color/white"
-        android:textSize="@dimen/_15ssp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -65,7 +85,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:layout_marginTop="16dp"
+        android:textSize="14sp"
         android:gravity="center_horizontal"
         android:text="Uploading store and ambiance images will attract\n more influencers, as they value the places they visit\n and how it reflects their identity."
         app:layout_constraintEnd_toEndOf="parent"

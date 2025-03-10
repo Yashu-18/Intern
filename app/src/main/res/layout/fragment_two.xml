@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,33 +11,40 @@
         android:id="@+id/backArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:layout_marginEnd="@dimen/_145sdp"
-        android:text="CreateDiary"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="59dp"
+        android:fontFamily="@font/poppins"
+        android:paddingTop="4dp"
+        android:text="Create Diary"
         android:textColor="#ffff"
-        android:textSize="@dimen/_22ssp"
+        android:textSize="21sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/backArrow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_45sdp"
         android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:background="@drawable/boarder"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12">
@@ -47,54 +53,59 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:src="@drawable/globe" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
             android:text="Public"
             android:textColor="#ffff"
-            android:layout_gravity="center"
             android:textSize="@dimen/_14ssp" />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch1"
+        <Switch
+            android:id="@+id/swNearByInflu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_140sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_2sdp"
-            app:thumbTint="@color/white"
-            android:layout_weight="1"
-            android:checked="false" />
-
-
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:thumb="@drawable/custom_thum_setting"
+            android:track="@drawable/custom_track"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:background="@drawable/boarder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view1">
 
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Everyone"
             android:layout_gravity="bottom"
             android:layout_marginStart="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_3sdp"
+            android:fontFamily="@font/poppins"
+            android:text="Everyone"
             android:textColor="#ffff"
             android:textSize="@dimen/_14ssp" />
 
@@ -103,18 +114,24 @@
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/_40sdp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins"
                 android:text="Contributions"
-                android:textColor="@color/white"/>
+                android:textColor="#57A1FF"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/contriBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_6sdp" />
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center_vertical" />
 
 
         </LinearLayout>
@@ -123,20 +140,27 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_35sdp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View"
-                android:textColor="@color/white"/>
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins"
+                android:text="Views"
+                android:textColor="#57A1FF"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/viewBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_6sdp" />
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center_vertical" />
 
 
         </LinearLayout>
@@ -146,49 +170,58 @@
 
 
     <LinearLayout
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:background="@drawable/boarder"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/saveBtn">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
             android:text="Contibution to be Admin Approved"
             android:textColor="#ffff"
             android:textSize="@dimen/_12ssp" />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch2"
+        <Switch
+            android:id="@+id/swNearByInflu1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:thumbTint="@color/white"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="Switch" />
+            android:layout_gravity="center_vertical"
+            android:thumb="@drawable/custom_thum_setting"
+            android:track="@drawable/custom_track"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_45sdp"
         android:id="@+id/saveBtn"
-        android:text="SAVE"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_height="@dimen/_45sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="@color/orange"
+        android:background="@drawable/btn_background"
+        android:text="SAVE"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

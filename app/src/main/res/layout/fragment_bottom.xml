@@ -12,11 +12,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:layout_marginTop="@dimen/_16sdp"
         android:text="Select Role"
         android:textColor="@color/white"
-        android:textSize="@dimen/_15ssp"
-        android:textStyle="bold"
+        android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,9 +46,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:text="Admin"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="14sp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_18sdp"/>
 
@@ -84,9 +85,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:text="View"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="14sp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_22sdp"/>
 
@@ -96,13 +98,15 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/contribution"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_100sdp"
-        android:id="@+id/contribution"
-        android:clickable="true"
-        app:cardCornerRadius="@dimen/_5sdp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:clickable="true"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
@@ -114,19 +118,19 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/account"
                 android:layout_marginStart="@dimen/_23sdp"
-                android:layout_marginTop="@dimen/_12sdp"/>
+                android:layout_marginTop="@dimen/_12sdp"
+                android:src="@drawable/account" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/poppins"
                 android:text="Contribution"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12ssp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                />
+                android:textSize="14sp" />
 
 
         </LinearLayout>
@@ -135,10 +139,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveBtn"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/orange"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/btn_background"
         android:text="SAVE"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
